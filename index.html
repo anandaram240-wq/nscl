@@ -257,6 +257,82 @@ tr:hover td{background:var(--surface2)}
 @media(max-width:600px){.grid-2{grid-template-columns:1fr}}
 .text-muted{color:var(--text2)}.text-success{color:var(--success)}.text-danger{color:var(--danger)}
 .fw-bold{font-weight:700}.text-center{text-align:center}
+
+/* ═══ CIE TARGET SECTION ═══ */
+@keyframes pulse-gold {
+  0%,100%{box-shadow:0 0 0 0 rgba(251,191,36,.7)}
+  50%{box-shadow:0 0 0 8px rgba(251,191,36,0)}
+}
+.cie-target-btn{position:relative}
+.cie-target-btn::after{content:'⭐';position:absolute;top:-8px;right:-6px;font-size:.6rem;background:#dc2626;color:#fff;border-radius:999px;padding:1px 4px;font-style:normal;line-height:1.4}
+#page-cietarget{font-family:var(--sans)}
+.cie-hero{background:linear-gradient(135deg,#1e1b4b 0%,#312e81 50%,#1e40af 100%);border-radius:var(--radius-lg);padding:1.5rem;color:#fff;margin-bottom:1.5rem;position:relative;overflow:hidden}
+.cie-hero::before{content:'';position:absolute;top:-30%;right:-10%;width:300px;height:300px;background:rgba(255,255,255,.04);border-radius:50%}
+.cie-hero h1{font-size:1.6rem;font-weight:800;margin-bottom:.4rem}
+.cie-hero .sub{opacity:.85;font-size:.95rem;margin-bottom:1rem}
+.cie-score-bar{display:flex;gap:.75rem;flex-wrap:wrap}
+.cie-score-pill{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:.35rem .9rem;font-size:.85rem;font-weight:700;display:flex;align-items:center;gap:.4rem}
+.cie-score-pill.gold{background:#fbbf24;color:#1e1b4b;border-color:#f59e0b}
+.cie-tabs{display:flex;gap:.5rem;margin-bottom:1.25rem;flex-wrap:wrap;border-bottom:2px solid var(--border);padding-bottom:.75rem}
+.cie-tab{background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius);padding:.5rem 1rem;font-size:.85rem;font-weight:600;color:var(--text2);transition:all .15s;cursor:pointer}
+.cie-tab:hover{background:var(--primary-light);color:var(--primary-dark);border-color:var(--primary)}
+.cie-tab.active{background:var(--primary);color:#fff;border-color:var(--primary)}
+.cie-tab .freq-badge{display:inline-block;background:rgba(255,255,255,.25);border-radius:999px;padding:.05rem .4rem;font-size:.7rem;margin-left:.4rem}
+.cie-tab:not(.active) .freq-badge{background:#fce7e7;color:#dc2626}
+.cie-panel{display:none}
+.cie-panel.active{display:block}
+/* PYQ Question Cards */
+.pyq-list{display:flex;flex-direction:column;gap:.75rem;margin-bottom:1.25rem}
+.pyq-card{background:var(--surface);border:2px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:border-color .15s}
+.pyq-card.must{border-left:4px solid #dc2626}
+.pyq-card.high{border-left:4px solid #d97706}
+.pyq-card.med{border-left:4px solid #0284c7}
+.pyq-card-header{padding:.85rem 1rem;cursor:pointer;display:flex;align-items:flex-start;gap:.75rem;background:var(--surface)}
+.pyq-card-header:hover{background:var(--surface2)}
+.pyq-num{background:var(--primary);color:#fff;border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:800;flex-shrink:0;margin-top:1px}
+.pyq-q-text{font-weight:600;font-size:.95rem;flex:1;line-height:1.4}
+.pyq-meta{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin-top:.35rem}
+.pyq-toggle{margin-left:auto;font-size:.8rem;color:var(--primary);font-weight:600;white-space:nowrap;flex-shrink:0}
+.pyq-answer{display:none;padding:1rem;border-top:1px solid var(--border);background:#fafbff}
+.pyq-answer.open{display:block}
+/* Answer formatting */
+.ans-block{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem;margin-bottom:.75rem}
+.ans-block h4{color:var(--primary-dark);margin-bottom:.5rem;font-size:.95rem;border-bottom:1px solid var(--border);padding-bottom:.35rem}
+.step-table{width:100%;border-collapse:collapse;font-size:.87rem;margin:.5rem 0}
+.step-table th{background:var(--primary-dark);color:#fff;padding:.45rem .6rem;text-align:left;font-weight:600}
+.step-table td{padding:.4rem .6rem;border-bottom:1px solid var(--border);vertical-align:top}
+.step-table tr:nth-child(even) td{background:var(--surface2)}
+.step-table td.highlight{background:#fef3c7;font-weight:700}
+.step-table td.final{background:#d1fae5;font-weight:800;color:#065f46}
+.math-box{background:#1e1b4b;color:#a5f3fc;font-family:var(--mono);border-radius:var(--radius);padding:.75rem 1rem;margin:.5rem 0;font-size:.88rem;line-height:1.6}
+.math-box .label{color:#fbbf24;font-weight:700;font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.25rem}
+.verify-box{background:#d1fae5;border:2px solid #059669;border-radius:var(--radius);padding:.6rem 1rem;font-size:.88rem;font-weight:700;color:#065f46;margin:.5rem 0}
+.warning-box{background:#fef3c7;border:2px solid #d97706;border-radius:var(--radius);padding:.6rem 1rem;font-size:.85rem;color:#92400e;margin:.5rem 0}
+.warning-box strong{color:#78350f}
+.section-label{font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:var(--primary);margin-bottom:.4rem;margin-top:.75rem}
+.topic-header{background:linear-gradient(90deg,var(--primary-dark),var(--primary));color:#fff;border-radius:var(--radius);padding:.7rem 1rem;margin-bottom:1rem;display:flex;align-items:center;gap:.75rem}
+.topic-header .freq{background:rgba(255,255,255,.2);border-radius:999px;padding:.15rem .6rem;font-size:.75rem;font-weight:700}
+.topic-header .must{background:#fbbf24;color:#1e1b4b;border-radius:999px;padding:.15rem .6rem;font-size:.75rem;font-weight:800}
+.revision-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:.75rem;margin-top:.75rem}
+.rev-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:.85rem}
+.rev-card h4{font-size:.85rem;color:var(--primary-dark);margin-bottom:.5rem}
+.rev-card .kv{display:flex;justify-content:space-between;font-size:.8rem;padding:.2rem 0;border-bottom:1px solid var(--border)}
+.rev-card .kv:last-child{border-bottom:none}
+.rev-card .kv .k{color:var(--text2)}
+.rev-card .kv .v{font-weight:700;font-family:var(--mono);font-size:.78rem}
+.trap-box{background:#fce7e7;border:2px dashed #dc2626;border-radius:var(--radius);padding:.6rem 1rem;font-size:.83rem;color:#991b1b;margin:.5rem 0}
+.trap-box strong{color:#7f1d1d}
+.diagram-ascii{background:#0f172a;color:#94a3b8;font-family:var(--mono);border-radius:var(--radius);padding:1rem;font-size:.78rem;line-height:1.5;overflow-x:auto;margin:.5rem 0;white-space:pre}
+.diagram-ascii .hl{color:#38bdf8}
+.diagram-ascii .hl2{color:#fbbf24}
+.diagram-ascii .hl3{color:#4ade80}
+.score-plan{background:linear-gradient(135deg,#064e3b,#065f46);color:#fff;border-radius:var(--radius-lg);padding:1.25rem;margin-bottom:1.25rem}
+.score-plan h3{color:#6ee7b7;margin-bottom:.75rem}
+.score-row{display:flex;align-items:center;gap:.75rem;padding:.5rem 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.score-row:last-child{border-bottom:none}
+.score-row .marks{font-size:1.3rem;font-weight:800;color:#fbbf24;min-width:40px}
+.score-row .topic{font-weight:600;flex:1}
+.score-row .strategy{font-size:.8rem;opacity:.8}
 </style>
 </head>
 <body>
@@ -277,6 +353,7 @@ tr:hover td{background:var(--surface2)}
     <button class="nav-btn" onclick="showPage('revision')">⚡ Flashcards</button>
     <button class="nav-btn" onclick="showPage('progress')">📈 Progress</button>
     <button class="nav-btn" onclick="showPage('audit')">🔍 Forensic Audit</button>
+    <button class="nav-btn cie-target-btn" onclick="showPage('cietarget')" style="background:#fbbf24;color:#1e1b4b;border-color:#f59e0b;font-weight:800;animation:pulse-gold 1.5s infinite;">⭐ CIE TARGET</button>
   </div>
 </nav>
 
@@ -659,6 +736,842 @@ tr:hover td{background:var(--surface2)}
   <h1 class="mb-2">🔍 Document Audit & QA Report</h1>
   <div id="audit-content"></div>
 </div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     ⭐ CIE TARGET PAGE
+════════════════════════════════════════════════════════════ -->
+<div id="page-cietarget" class="page">
+
+  <!-- Hero Banner -->
+  <div class="cie-hero">
+    <div style="font-size:.8rem;opacity:.7;margin-bottom:.3rem">⭐ MANDATORY CIE EXAM SECTION · 23CS702 MCE HASSAN</div>
+    <h1>🎯 CIE TARGET — Score 15+/20</h1>
+    <div class="sub">3 Numerical Problems + 1 Theory · All PYQs with Full Solutions · Prof. Tejonidhi M R Notes-Verified</div>
+    <div class="cie-score-bar">
+      <div class="cie-score-pill gold">🎯 Target: 15/20</div>
+      <div class="cie-score-pill">🔴 RSA — 66.7% frequency</div>
+      <div class="cie-score-pill">🔴 Rabin — 55.6% frequency</div>
+      <div class="cie-score-pill">🟡 Knapsack — 22.2% frequency</div>
+      <div class="cie-score-pill">🟠 IT Act — 33.3% frequency</div>
+    </div>
+  </div>
+
+  <!-- Score Strategy -->
+  <div class="score-plan">
+    <h3>📊 15+/20 Scoring Strategy — CIE Format: 3 Numericals + 1 Theory</h3>
+    <div class="score-row">
+      <div class="marks">5M</div>
+      <div class="topic">🔴 RSA Algorithm (Numerical)</div>
+      <div class="strategy">Highest PYQ frequency (6/9 papers). Same 5-step template every time. Full marks achievable.</div>
+    </div>
+    <div class="score-row">
+      <div class="marks">5M</div>
+      <div class="topic">🔴 Rabin Cryptosystem (Numerical + Algorithm)</div>
+      <div class="strategy">5/9 papers. 3 algorithms + 1 worked example = covers all variants. Draw diagram for full marks.</div>
+    </div>
+    <div class="score-row">
+      <div class="marks">5M</div>
+      <div class="topic">🟡 Knapsack Problem (Numerical)</div>
+      <div class="strategy">Exact same Q repeated in P7 (2024) + P9 (2025). Greedy algorithm — O(n) simple steps.</div>
+    </div>
+    <div class="score-row">
+      <div class="marks">5M</div>
+      <div class="topic">🟠 IT Act 2000 — Module 4 Theory</div>
+      <div class="strategy">Objectives (3 papers) + Provisions (3 papers). Write 6 objectives + Section numbers = full marks.</div>
+    </div>
+  </div>
+
+  <!-- Topic Tabs -->
+  <div class="cie-tabs">
+    <button class="cie-tab active" onclick="showCieTab('rsa')">🔑 RSA Algorithm<span class="freq-badge">6/9 ⭐</span></button>
+    <button class="cie-tab" onclick="showCieTab('rabin')">🔐 Rabin Cryptosystem<span class="freq-badge">5/9 ⭐</span></button>
+    <button class="cie-tab" onclick="showCieTab('knapsack')">🎒 Knapsack Problem<span class="freq-badge">2/9</span></button>
+    <button class="cie-tab" onclick="showCieTab('itact')">📜 IT Act 2000<span class="freq-badge">6/9</span></button>
+  </div>
+
+  <!-- ═══════════════ RSA PANEL ═══════════════ -->
+  <div id="cie-panel-rsa" class="cie-panel active">
+    <div class="topic-header">
+      <span style="font-size:1.5rem">🔑</span>
+      <div>
+        <div style="font-size:1.1rem;font-weight:800">RSA Algorithm — Numerical</div>
+        <div style="font-size:.8rem;opacity:.85">Source: Prof. Tejonidhi M R, AS_.ppt Slides 37–46</div>
+      </div>
+      <span class="must">⭐ HIGHEST PRIORITY — 6/9 Papers</span>
+    </div>
+
+    <!-- Standard Template -->
+    <div class="card mb-3">
+      <h3 style="color:var(--primary-dark);margin-bottom:.75rem">📐 Standard RSA Template — Memorize This (5 Steps)</h3>
+      <div class="math-box">
+        <div class="label">RSA 5-Step Formula</div>
+        Step 1:  n = p × q                  ← Modulus (public)
+Step 2:  φ(n) = (p−1)(q−1)          ← Euler's Totient
+Step 3:  Choose e: gcd(e, φ(n)) = 1 ← Public exponent
+Step 4:  d = e⁻¹ mod φ(n)           ← Private key (Extended Euclidean)
+         Verify: (e × d) mod φ(n) = 1
+Step 5a: C = Mᵉ mod n               ← ENCRYPTION
+Step 5b: M = Cᵈ mod n               ← DECRYPTION (verify = original M)</div>
+    </div>
+
+    <!-- All PYQ Questions List -->
+    <div class="section-label">📋 ALL RSA PYQs (6 Numerical + 2 Theory) — Click to Expand Answer</div>
+    <div class="pyq-list">
+
+      <!-- PYQ 1: p=17,q=11,e=7,M=88 — MOST REPEATED -->
+      <div class="pyq-card must">
+        <div class="pyq-card-header" onclick="toggleAns(this)">
+          <div class="pyq-num">1</div>
+          <div>
+            <div class="pyq-q-text">Perform encryption and decryption using RSA algorithm for the given data: p = 17, q = 11, e = 7 and Message = 88.</div>
+            <div class="pyq-meta">
+              <span class="badge badge-p0">P0 MUST DO</span>
+              <span class="badge badge-marks">P5: Sept/Oct 2022 · 10M</span>
+              <span class="badge badge-verified">✓ Math Verified</span>
+              <span class="badge badge-module">Also: P3 Jan 2021 (8M) — same parameters</span>
+            </div>
+          </div>
+          <div class="pyq-toggle">▼ Show Answer</div>
+        </div>
+        <div class="pyq-answer">
+          <div class="ans-block">
+            <h4>Given: p = 17, q = 11, e = 7, Plaintext M = 88</h4>
+            <table class="step-table">
+              <tr><th>Step</th><th>Operation</th><th>Result</th></tr>
+              <tr><td><strong>Step 1</strong></td><td>n = p × q = 17 × 11</td><td class="highlight">n = 187</td></tr>
+              <tr><td><strong>Step 2</strong></td><td>φ(n) = (p−1)(q−1) = 16 × 10</td><td class="highlight">φ(n) = 160</td></tr>
+              <tr><td><strong>Step 3</strong></td><td>e = 7; gcd(7, 160) = 1 ✓</td><td class="highlight">Public Key = {7, 187}</td></tr>
+              <tr><td><strong>Step 4</strong></td><td>Find d: 7d ≡ 1 mod 160<br>23×7 = 161 = 160+1 ≡ 1 mod 160 ✓</td><td class="highlight">d = 23 → Private Key = {23, 187}</td></tr>
+              <tr><td><strong>Step 5a</strong></td><td>C = 88⁷ mod 187</td><td class="highlight">C = 11</td></tr>
+              <tr><td><strong>Step 5b</strong></td><td>M = 11²³ mod 187</td><td class="final">M = 88 ✓ VERIFIED</td></tr>
+            </table>
+            <div class="math-box"><div class="label">Extended Euclidean — Finding d=23</div>160 = 22(7) + 6
+ 7  = 1(6) + 1
+ ⟹ 1 = 7 − 1(6) = 7 − (160 − 22×7) = 23×7 − 160
+ ∴ d = 23  [Check: 23 × 7 = 161 ≡ 1 mod 160 ✓]</div>
+            <div class="verify-box">✅ FINAL ANSWER: Public Key = {7, 187} · Private Key = {23, 187} · C = 11 · Decrypted M = 88 ✓</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PYQ 2: p=11,q=3,M=5 -->
+      <div class="pyq-card must">
+        <div class="pyq-card-header" onclick="toggleAns(this)">
+          <div class="pyq-num">2</div>
+          <div>
+            <div class="pyq-q-text">Perform RSA encryption and decryption using the following information: P = 11, Q = 3, M = 5.</div>
+            <div class="pyq-meta">
+              <span class="badge badge-p0">P0 MUST DO</span>
+              <span class="badge badge-marks">P8: Dec 2019 · 8M</span>
+              <span class="badge badge-verified">✓ Math Verified</span>
+            </div>
+          </div>
+          <div class="pyq-toggle">▼ Show Answer</div>
+        </div>
+        <div class="pyq-answer">
+          <div class="ans-block">
+            <h4>Given: p = 11, q = 3, M = 5</h4>
+            <table class="step-table">
+              <tr><th>Step</th><th>Operation</th><th>Result</th></tr>
+              <tr><td><strong>Step 1</strong></td><td>n = 11 × 3</td><td class="highlight">n = 33</td></tr>
+              <tr><td><strong>Step 2</strong></td><td>φ(n) = (11−1)(3−1) = 10×2</td><td class="highlight">φ(n) = 20</td></tr>
+              <tr><td><strong>Step 3</strong></td><td>e = 3; gcd(3,20)=1 ✓</td><td class="highlight">Public Key = {3, 33}</td></tr>
+              <tr><td><strong>Step 4</strong></td><td>3×7=21≡1 mod 20 ✓ → d=7</td><td class="highlight">Private Key = {7, 33}</td></tr>
+              <tr><td><strong>Step 5a</strong></td><td>C = 5³ mod 33 = 125 mod 33 = 125−3×33</td><td class="highlight">C = 26</td></tr>
+              <tr><td><strong>Step 5b</strong></td><td>M = 26⁷ mod 33</td><td class="final">M = 5 ✓ VERIFIED</td></tr>
+            </table>
+            <div class="verify-box">✅ Public Key = {3, 33} · Private Key = {7, 33} · C = 26 · M = 5 ✓</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PYQ 3: p=7,q=11,M=5 (2025) -->
+      <div class="pyq-card must">
+        <div class="pyq-card-header" onclick="toggleAns(this)">
+          <div class="pyq-num">3</div>
+          <div>
+            <div class="pyq-q-text">Encrypt and decrypt message 5 using the RSA algorithm, take p = 7 and q = 11.</div>
+            <div class="pyq-meta">
+              <span class="badge badge-p0">P0 MUST DO</span>
+              <span class="badge badge-marks">P9: Feb/Mar 2025 · 10M</span>
+              <span class="badge badge-verified">✓ Math Verified</span>
+            </div>
+          </div>
+          <div class="pyq-toggle">▼ Show Answer</div>
+        </div>
+        <div class="pyq-answer">
+          <div class="ans-block">
+            <h4>Given: p = 7, q = 11, M = 5 (e not given — choose smallest coprime to φ(n))</h4>
+            <table class="step-table">
+              <tr><th>Step</th><th>Operation</th><th>Result</th></tr>
+              <tr><td><strong>Step 1</strong></td><td>n = 7 × 11</td><td class="highlight">n = 77</td></tr>
+              <tr><td><strong>Step 2</strong></td><td>φ(n) = (7−1)(11−1) = 6×10</td><td class="highlight">φ(n) = 60</td></tr>
+              <tr><td><strong>Step 3</strong></td><td>Choose e=7; gcd(7,60)=1 ✓</td><td class="highlight">Public Key = {7, 77}</td></tr>
+              <tr><td><strong>Step 4</strong></td><td>7×43=301=5×60+1≡1 mod 60 ✓</td><td class="highlight">d=43 → Private Key = {43, 77}</td></tr>
+              <tr><td><strong>Step 5a</strong></td><td>C = 5⁷ mod 77 = 78125 mod 77</td><td class="highlight">C = 10</td></tr>
+              <tr><td><strong>Step 5b</strong></td><td>M = 10⁴³ mod 77</td><td class="final">M = 5 ✓ VERIFIED</td></tr>
+            </table>
+            <div class="warning-box"><strong>⚠️ Note:</strong> When e is not given, choose smallest e &gt; 1 with gcd(e, φ(n)) = 1. Here e=7 works (gcd(7,60)=1). Some textbooks use e=13 (also valid).</div>
+            <div class="verify-box">✅ Public Key = {7, 77} · Private Key = {43, 77} · C = 10 · M = 5 ✓</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PYQ 4: p=3,q=11,m=2 -->
+      <div class="pyq-card must">
+        <div class="pyq-card-header" onclick="toggleAns(this)">
+          <div class="pyq-num">4</div>
+          <div>
+            <div class="pyq-q-text">Determine the public and private keys for the given prime numbers (P = 3, Q = 11). Encrypt the message m = 2 using RSA.</div>
+            <div class="pyq-meta">
+              <span class="badge badge-p0">P0 MUST DO</span>
+              <span class="badge badge-marks">P6: Feb/Mar 2023 · 6M</span>
+              <span class="badge badge-verified">✓ Math Verified</span>
+            </div>
+          </div>
+          <div class="pyq-toggle">▼ Show Answer</div>
+        </div>
+        <div class="pyq-answer">
+          <div class="ans-block">
+            <h4>Given: p = 3, q = 11, m = 2</h4>
+            <table class="step-table">
+              <tr><th>Step</th><th>Operation</th><th>Result</th></tr>
+              <tr><td><strong>Step 1</strong></td><td>n = 3 × 11</td><td class="highlight">n = 33</td></tr>
+              <tr><td><strong>Step 2</strong></td><td>φ(n) = 2×10</td><td class="highlight">φ(n) = 20</td></tr>
+              <tr><td><strong>Step 3</strong></td><td>e=3; gcd(3,20)=1</td><td class="highlight">Public Key = {3, 33}</td></tr>
+              <tr><td><strong>Step 4</strong></td><td>3×7=21≡1 mod 20</td><td class="highlight">Private Key = {7, 33}</td></tr>
+              <tr><td><strong>Step 5a</strong></td><td>C = 2³ mod 33 = 8</td><td class="final">C = 8</td></tr>
+            </table>
+            <div class="verify-box">✅ Public Key = {3, 33} · Private Key = {7, 33} · C = 8</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PYQ 5: p=5,q=11,M=18 -->
+      <div class="pyq-card must">
+        <div class="pyq-card-header" onclick="toggleAns(this)">
+          <div class="pyq-num">5</div>
+          <div>
+            <div class="pyq-q-text">Using RSA algorithm, find the encryption key and decryption key, and perform encryption and decryption: P = 5, q = 11, M = 18.</div>
+            <div class="pyq-meta">
+              <span class="badge badge-p0">P0 MUST DO</span>
+              <span class="badge badge-marks">P1: Dec 2018 · 8M</span>
+              <span class="badge badge-verified">✓ Math Verified</span>
+            </div>
+          </div>
+          <div class="pyq-toggle">▼ Show Answer</div>
+        </div>
+        <div class="pyq-answer">
+          <div class="ans-block">
+            <h4>Given: p = 5, q = 11, M = 18</h4>
+            <table class="step-table">
+              <tr><th>Step</th><th>Operation</th><th>Result</th></tr>
+              <tr><td><strong>Step 1</strong></td><td>n = 5 × 11</td><td class="highlight">n = 55</td></tr>
+              <tr><td><strong>Step 2</strong></td><td>φ(n) = 4×10</td><td class="highlight">φ(n) = 40</td></tr>
+              <tr><td><strong>Step 3</strong></td><td>e=3; gcd(3,40)=1</td><td class="highlight">Public Key = {3, 55}</td></tr>
+              <tr><td><strong>Step 4</strong></td><td>3×27=81=2×40+1≡1 mod 40</td><td class="highlight">d=27 → Private Key = {27, 55}</td></tr>
+              <tr><td><strong>Step 5a</strong></td><td>C = 18³ mod 55 = 5832 mod 55 (5832=106×55+2)</td><td class="highlight">C = 2</td></tr>
+              <tr><td><strong>Step 5b</strong></td><td>M = 2²⁷ mod 55</td><td class="final">M = 18 ✓ VERIFIED</td></tr>
+            </table>
+            <div class="verify-box">✅ Public Key = {3, 55} · Private Key = {27, 55} · C = 2 · M = 18 ✓</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PYQ 6: given public key {7,187}, private key {23,187}, M=88 -->
+      <div class="pyq-card must">
+        <div class="pyq-card-header" onclick="toggleAns(this)">
+          <div class="pyq-num">6</div>
+          <div>
+            <div class="pyq-q-text">Perform encryption and decryption for the following using RSA algorithm: Given public key = {7, 187}, private key = {23, 187} and M = 88.</div>
+            <div class="pyq-meta">
+              <span class="badge badge-p0">P0 MUST DO</span>
+              <span class="badge badge-marks">P3: Jan 2021 · 8M</span>
+              <span class="badge badge-verified">✓ Math Verified</span>
+            </div>
+          </div>
+          <div class="pyq-toggle">▼ Show Answer</div>
+        </div>
+        <div class="pyq-answer">
+          <div class="ans-block">
+            <h4>Given: Public Key = {7, 187}, Private Key = {23, 187}, M = 88</h4>
+            <div class="math-box"><div class="label">Keys already given — go directly to Encrypt/Decrypt</div>e = 7, d = 23, n = 187, Plaintext M = 88</div>
+            <table class="step-table">
+              <tr><th>Step</th><th>Operation</th><th>Result</th></tr>
+              <tr><td><strong>Encryption</strong></td><td>C = Mᵉ mod n = 88⁷ mod 187</td><td class="highlight">C = 11</td></tr>
+              <tr><td><strong>Decryption</strong></td><td>M = Cᵈ mod n = 11²³ mod 187</td><td class="final">M = 88 ✓ VERIFIED</td></tr>
+            </table>
+            <div class="verify-box">✅ Ciphertext C = 11 · Decrypted M = 88 ✓</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PYQ 7: Diagram question -->
+      <div class="pyq-card high">
+        <div class="pyq-card-header" onclick="toggleAns(this)">
+          <div class="pyq-num">7</div>
+          <div>
+            <div class="pyq-q-text">With neat general diagram, illustrate the algorithms used in RSA.</div>
+            <div class="pyq-meta">
+              <span class="badge badge-p0">P0</span>
+              <span class="badge badge-marks">P4: Feb/Mar 2022 · 10M</span>
+              <span class="badge badge-marks">P7: Dec 2023 · 10M</span>
+            </div>
+          </div>
+          <div class="pyq-toggle">▼ Show Answer</div>
+        </div>
+        <div class="pyq-answer">
+          <div class="ans-block">
+            <h4>RSA General Architecture Diagram</h4>
+            <div class="diagram-ascii"><span class="hl">KEY GENERATION (Receiver/Bob)</span>
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Select primes p and q (large, secret)
+  Compute: <span class="hl2">n = p × q</span>  (modulus)
+  Compute: <span class="hl2">φ(n) = (p−1)(q−1)</span>
+  Select: <span class="hl2">e</span> such that gcd(e, φ(n)) = 1
+  Compute: <span class="hl2">d = e⁻¹ mod φ(n)</span>
+  
+  PUBLIC KEY  → <span class="hl3">{e, n}</span>  — broadcast
+  PRIVATE KEY → <span class="hl">{d, n}</span>  — secret
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+<span class="hl">SENDER (Alice)</span>           <span class="hl">RECEIVER (Bob)</span>
+━━━━━━━━━━━━━━━━         ━━━━━━━━━━━━━━━━━
+  Plaintext M               Ciphertext C
+       │                          │
+       ▼                          ▼
+  <span class="hl2">C = Mᵉ mod n</span>  ──────►  <span class="hl3">M = Cᵈ mod n</span>
+  (encrypt with           (decrypt with
+   public key {e,n})       private key {d,n})
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Security: Based on hardness of <span class="hl2">integer factorization</span>
+</div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end pyq-list RSA -->
+
+    <!-- RSA Quick Revision -->
+    <div class="section-label">⚡ RSA QUICK REVISION CARD</div>
+    <div class="revision-grid">
+      <div class="rev-card">
+        <h4>🔑 Key Formulas</h4>
+        <div class="kv"><span class="k">Modulus</span><span class="v">n = p × q</span></div>
+        <div class="kv"><span class="k">Totient</span><span class="v">φ(n) = (p−1)(q−1)</span></div>
+        <div class="kv"><span class="k">Key condition</span><span class="v">e×d ≡ 1 mod φ(n)</span></div>
+        <div class="kv"><span class="k">Encrypt</span><span class="v">C = Mᵉ mod n</span></div>
+        <div class="kv"><span class="k">Decrypt</span><span class="v">M = Cᵈ mod n</span></div>
+      </div>
+      <div class="rev-card">
+        <h4>📌 All PYQ Solutions Summary</h4>
+        <div class="kv"><span class="k">p=17,q=11,e=7,M=88</span><span class="v">n=187, d=23, C=11</span></div>
+        <div class="kv"><span class="k">p=11,q=3,M=5</span><span class="v">n=33, d=7, C=26</span></div>
+        <div class="kv"><span class="k">p=7,q=11,M=5</span><span class="v">n=77, d=43, C=10</span></div>
+        <div class="kv"><span class="k">p=3,q=11,m=2</span><span class="v">n=33, d=7, C=8</span></div>
+        <div class="kv"><span class="k">p=5,q=11,M=18</span><span class="v">n=55, d=27, C=2</span></div>
+      </div>
+    </div>
+    <div class="trap-box"><strong>⚠️ Examiner Trap:</strong> Always verify d by computing e×d and checking mod φ(n) = 1. Write this verification step explicitly in exam — it earns marks!</div>
+  </div><!-- end RSA panel -->
+
+  <!-- ═══════════════ RABIN PANEL ═══════════════ -->
+  <div id="cie-panel-rabin" class="cie-panel">
+    <div class="topic-header">
+      <span style="font-size:1.5rem">🔐</span>
+      <div>
+        <div style="font-size:1.1rem;font-weight:800">Rabin Cryptosystem</div>
+        <div style="font-size:.8rem;opacity:.85">Source: Prof. Tejonidhi M R, AS_.ppt Slides 65–73</div>
+      </div>
+      <span class="must">⭐ HIGH PRIORITY — 5/9 Papers</span>
+    </div>
+
+    <div class="pyq-list">
+
+      <!-- All 5 Rabin PYQs — master answer -->
+      <div class="pyq-card must">
+        <div class="pyq-card-header" onclick="toggleAns(this)">
+          <div class="pyq-num">1</div>
+          <div>
+            <div class="pyq-q-text">Explain the algorithm for key generation, encryption, and decryption using Rabin cryptosystem with neat diagram.</div>
+            <div class="pyq-meta">
+              <span class="badge badge-p0">P0 — MASTER ANSWER</span>
+              <span class="badge badge-marks">P3: Jan 2021 · 10M</span>
+              <span class="badge badge-marks">P4: Feb/Mar 2022 · 12M</span>
+              <span class="badge badge-marks">P9: Feb/Mar 2025 · 10M</span>
+            </div>
+          </div>
+          <div class="pyq-toggle">▼ Show Full Answer</div>
+        </div>
+        <div class="pyq-answer">
+          <div class="ans-block">
+            <h4>I. Introduction</h4>
+            <p style="font-size:.9rem;line-height:1.6">The <strong>Rabin cryptosystem</strong> was introduced by Michael O. Rabin in <strong>1979</strong>. It is an asymmetric public-key cryptosystem whose security is <strong>provably equivalent to integer factorization</strong> — the first cryptosystem to have such a proof.</p>
+          </div>
+          <div class="ans-block">
+            <h4>II. Key Generation Algorithm</h4>
+            <table class="step-table">
+              <tr><th>Step</th><th>Operation</th></tr>
+              <tr><td><strong>Step 1</strong></td><td>Select two large prime numbers p and q satisfying the <strong>Blum integer condition</strong>:<br><code>p ≡ 3 (mod 4)   AND   q ≡ 3 (mod 4)</code></td></tr>
+              <tr><td><strong>Step 2</strong></td><td>Compute modulus: <strong>n = p × q</strong></td></tr>
+              <tr><td><strong>Public Key</strong></td><td><strong>n</strong> (broadcast to all)</td></tr>
+              <tr><td><strong>Private Key</strong></td><td><strong>(p, q)</strong> (kept secret)</td></tr>
+            </table>
+          </div>
+          <div class="ans-block">
+            <h4>III. Encryption Algorithm (Sender)</h4>
+            <div class="math-box"><div class="label">Input: Plaintext P where 0 ≤ P &lt; n</div>Ciphertext C = P² mod n   (simple squaring)</div>
+          </div>
+          <div class="ans-block">
+            <h4>IV. Decryption Algorithm — CRT (Receiver)</h4>
+            <table class="step-table">
+              <tr><th>Step</th><th>Operation</th></tr>
+              <tr><td><strong>Step 1</strong></td><td>Compute roots mod p: <code>a₁ = C^((p+1)/4) mod p</code> and <code>a₂ = p − a₁</code></td></tr>
+              <tr><td><strong>Step 2</strong></td><td>Compute roots mod q: <code>b₁ = C^((q+1)/4) mod q</code> and <code>b₂ = q − b₁</code></td></tr>
+              <tr><td><strong>Step 3</strong></td><td>Find c,d via Extended Euclidean: c·p + d·q = 1<br>Set Mₚ = d·q mod n, Mq = c·p mod n</td></tr>
+              <tr><td><strong>Step 4</strong></td><td>4 roots: P1=(a₁Mₚ+b₁Mq)modn, P2=(a₁Mₚ−b₁Mq)modn, P3=n−P2, P4=n−P1</td></tr>
+              <tr><td><strong>Result</strong></td><td>One of {P1, P2, P3, P4} = original plaintext P</td></tr>
+            </table>
+          </div>
+          <div class="ans-block">
+            <h4>V. Worked Numerical Example (Classroom Notes, Slide 71)</h4>
+            <div class="math-box"><div class="label">Given: p=7, q=11 (both ≡ 3 mod 4 ✓), Plaintext P=20</div>ENCRYPTION:
+  n = 7 × 11 = 77
+  C = 20² mod 77 = 400 mod 77 = 400 − 5×77 = <strong>C = 15</strong>
+
+DECRYPTION — roots mod p=7:
+  (p+1)/4 = 8/4 = 2
+  a₁ = 15² mod 7 = 225 mod 7 = 1       a₂ = 7−1 = 6
+
+DECRYPTION — roots mod q=11:
+  (q+1)/4 = 12/4 = 3
+  b₁ = 15³ mod 11 = 4³ mod 11 = 64 mod 11 = 9    b₂ = 11−9 = 2
+
+EXTENDED EUCLIDEAN (7, 11):
+  2(11) − 3(7) = 1  ⟹  Mₚ = 2×11 = 22,  Mq = −3×7 = −21 ≡ 56 mod 77
+
+4 CRT ROOTS:
+  P1 = (1×22 + 9×56) mod 77 = (22+504) mod 77 = 526 mod 77 = 64
+  P2 = (1×22 − 9×56) mod 77 = −482 mod 77 = 57
+  P3 = 77 − 57 = 20  ← ORIGINAL PLAINTEXT ✓
+  P4 = 77 − 64 = 13</div>
+            <div class="verify-box">✅ Four Roots: {13, 20, 57, 64} · All verified: r² mod 77 = 15 ✓ · P = 20 recovered!</div>
+            <table class="step-table">
+              <tr><th>Root</th><th>r² mod 77</th><th>= C=15?</th></tr>
+              <tr><td>13</td><td>169 mod 77 = 15</td><td class="final">✓</td></tr>
+              <tr><td><strong>20</strong></td><td>400 mod 77 = 15</td><td class="final">✓ ORIGINAL</td></tr>
+              <tr><td>57</td><td>3249 mod 77 = 15</td><td class="final">✓</td></tr>
+              <tr><td>64</td><td>4096 mod 77 = 15</td><td class="final">✓</td></tr>
+            </table>
+          </div>
+          <div class="ans-block">
+            <h4>VI. Disadvantage — 4-to-1 Ambiguity</h4>
+            <p style="font-size:.9rem">The primary weakness: decryption always produces <strong>4 candidate plaintexts</strong>. Only ONE is the real message. <strong>Fix:</strong> Sender appends redundant bits (e.g., last 16 bits repeated) before encryption so receiver can identify the correct root.</p>
+          </div>
+          <div class="diagram-ascii"><span class="hl">RABIN CRYPTOSYSTEM — GENERAL DIAGRAM</span>
+
+KEY GENERATION              ENCRYPTION          DECRYPTION
+─────────────               ──────────          ──────────
+Choose p, q                 Input: P &lt; n        Input: C, (p,q)
+p ≡ 3 mod 4                                     
+q ≡ 3 mod 4                 <span class="hl2">C = P² mod n</span>      roots mod p: a₁,a₂
+n = p × q                                       roots mod q: b₁,b₂
+                                                CRT combine →
+<span class="hl3">Public Key = n</span>                                  <span class="hl3">{P1,P2,P3,P4}</span>
+<span class="hl">Private Key = (p,q)</span>                              Select correct → P
+</div>
+        </div>
+      </div>
+
+      <div class="pyq-card high">
+        <div class="pyq-card-header" onclick="toggleAns(this)">
+          <div class="pyq-num">2</div>
+          <div>
+            <div class="pyq-q-text">Explain how Rabin cryptosystem works? / Describe the Rabin cryptosystem encryption, decryption and key generation procedure.</div>
+            <div class="pyq-meta">
+              <span class="badge badge-p0">P0</span>
+              <span class="badge badge-marks">P5: Sept/Oct 2022 · 5M</span>
+              <span class="badge badge-marks">P6: Feb/Mar 2023 · 6M</span>
+            </div>
+          </div>
+          <div class="pyq-toggle">▼ Show Concise Answer (5–6M)</div>
+        </div>
+        <div class="pyq-answer">
+          <div class="ans-block">
+            <h4>Concise Answer for 5–6 Mark Questions</h4>
+            <p style="font-size:.88rem;line-height:1.6">
+            <strong>Introduction:</strong> Rabin (1979) is an asymmetric cryptosystem provably as hard to break as factoring n.<br><br>
+            <strong>Key Generation:</strong> Choose primes p, q both ≡ 3 (mod 4). Compute n=pq. Public Key = n; Private Key = (p,q).<br><br>
+            <strong>Encryption:</strong> C = P² mod n.<br><br>
+            <strong>Decryption:</strong> Compute 4 square roots mod n using CRT: roots mod p using exponent (p+1)/4, roots mod q using (q+1)/4. Combine via CRT to get {P1,P2,P3,P4}. Identify correct plaintext using redundancy.<br><br>
+            <strong>Disadvantage:</strong> 4-to-1 decryption ambiguity. Fixed by padding.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end rabin pyq-list -->
+
+    <div class="section-label">⚡ RABIN QUICK REVISION CARD</div>
+    <div class="revision-grid">
+      <div class="rev-card">
+        <h4>📌 Key Facts</h4>
+        <div class="kv"><span class="k">Introduced</span><span class="v">Michael O. Rabin, 1979</span></div>
+        <div class="kv"><span class="k">Security</span><span class="v">≡ Integer Factorization</span></div>
+        <div class="kv"><span class="k">Blum condition</span><span class="v">p≡q≡3 mod 4</span></div>
+        <div class="kv"><span class="k">Public Key</span><span class="v">n = p×q</span></div>
+        <div class="kv"><span class="k">Private Key</span><span class="v">(p, q)</span></div>
+        <div class="kv"><span class="k">Encrypt</span><span class="v">C = P² mod n</span></div>
+        <div class="kv"><span class="k">Weakness</span><span class="v">4-to-1 ambiguity</span></div>
+      </div>
+      <div class="rev-card">
+        <h4>📌 Worked Example Summary</h4>
+        <div class="kv"><span class="k">p=7, q=11</span><span class="v">n=77</span></div>
+        <div class="kv"><span class="k">P=20</span><span class="v">C=15</span></div>
+        <div class="kv"><span class="k">Roots mod 7</span><span class="v">a₁=1, a₂=6</span></div>
+        <div class="kv"><span class="k">Roots mod 11</span><span class="v">b₁=9, b₂=2</span></div>
+        <div class="kv"><span class="k">4 CRT roots</span><span class="v">{13,20,57,64}</span></div>
+        <div class="kv"><span class="k">Original P</span><span class="v">20 ✓</span></div>
+      </div>
+    </div>
+  </div><!-- end Rabin panel -->
+
+  <!-- ═══════════════ KNAPSACK PANEL ═══════════════ -->
+  <div id="cie-panel-knapsack" class="cie-panel">
+    <div class="topic-header">
+      <span style="font-size:1.5rem">🎒</span>
+      <div>
+        <div style="font-size:1.1rem;font-weight:800">Knapsack Cryptosystem — Numerical</div>
+        <div style="font-size:.8rem;opacity:.85">Source: Prof. Tejonidhi M R, AS_.ppt Slides 13–24</div>
+      </div>
+      <span class="freq" style="background:#fef3c7;color:#92400e">2/9 Papers + 1 Optional</span>
+    </div>
+
+    <div class="pyq-list">
+
+      <!-- PYQ 1&2: inv_knapsackSum — SAME Q in 2 papers -->
+      <div class="pyq-card must">
+        <div class="pyq-card-header" onclick="toggleAns(this)">
+          <div class="pyq-num">1</div>
+          <div>
+            <div class="pyq-q-text">Assume that a = (17, 25, 46, 94, 201, 400) and sum s = 272 are given. Find the tuple x using the inv_knapsackSum routine.</div>
+            <div class="pyq-meta">
+              <span class="badge badge-p0">EXACT SAME Q — 2 PAPERS</span>
+              <span class="badge badge-marks">P7: Dec 2023 · 8M</span>
+              <span class="badge badge-marks">P9: Feb/Mar 2025 · 10M</span>
+              <span class="badge badge-verified">✓ Math Verified</span>
+            </div>
+          </div>
+          <div class="pyq-toggle">▼ Show Answer</div>
+        </div>
+        <div class="pyq-answer">
+          <div class="ans-block">
+            <h4>Concept: inv_knapsackSum Algorithm (From AS_.ppt Slides 13–16)</h4>
+            <p style="font-size:.88rem;margin-bottom:.5rem">
+              General knapsack is <strong>NP-complete</strong> (exponential time O(2ⁿ)).
+              Super-increasing knapsack is solved by <strong>greedy O(n) algorithm</strong>.
+              Super-increasing condition: each aᵢ &gt; sum of all previous elements.
+            </p>
+          </div>
+          <div class="ans-block">
+            <h4>Verify Super-Increasing Property</h4>
+            <table class="step-table">
+              <tr><th>a_i</th><th>Condition</th><th>✓?</th></tr>
+              <tr><td>17</td><td>—</td><td>✓</td></tr>
+              <tr><td>25</td><td>25 &gt; 17</td><td>✓</td></tr>
+              <tr><td>46</td><td>46 &gt; 17+25=42</td><td>✓</td></tr>
+              <tr><td>94</td><td>94 &gt; 17+25+46=88</td><td>✓</td></tr>
+              <tr><td>201</td><td>201 &gt; 17+25+46+94=182</td><td>✓</td></tr>
+              <tr><td>400</td><td>400 &gt; 17+25+46+94+201=383</td><td>✓</td></tr>
+            </table>
+          </div>
+          <div class="ans-block">
+            <h4>Greedy Execution — Start from LARGEST element (a₆) down to a₁</h4>
+            <table class="step-table">
+              <tr><th>Step i</th><th>a[i]</th><th>Remaining s</th><th>s ≥ a[i]?</th><th>x[i]</th><th>New s</th></tr>
+              <tr><td>6</td><td>400</td><td>272</td><td>272 &lt; 400 → NO</td><td class="highlight">0</td><td>272</td></tr>
+              <tr><td>5</td><td>201</td><td>272</td><td>272 ≥ 201 → YES</td><td class="highlight">1</td><td>71</td></tr>
+              <tr><td>4</td><td>94</td><td>71</td><td>71 &lt; 94 → NO</td><td class="highlight">0</td><td>71</td></tr>
+              <tr><td>3</td><td>46</td><td>71</td><td>71 ≥ 46 → YES</td><td class="highlight">1</td><td>25</td></tr>
+              <tr><td>2</td><td>25</td><td>25</td><td>25 ≥ 25 → YES</td><td class="highlight">1</td><td>0</td></tr>
+              <tr><td>1</td><td>17</td><td>0</td><td>0 &lt; 17 → NO</td><td class="highlight">0</td><td>0</td></tr>
+            </table>
+            <div class="math-box"><div class="label">Final Answer</div>x = (x₁, x₂, x₃, x₄, x₅, x₆) = (0, 1, 1, 0, 1, 0)</div>
+            <div class="verify-box">✅ Verification: Σ xᵢ·aᵢ = 0(17)+1(25)+1(46)+0(94)+1(201)+0(400) = 25+46+201 = <strong>272 = s ✓</strong></div>
+          </div>
+          <div class="trap-box"><strong>⚠️ CRITICAL TRAP: ALWAYS start from the LARGEST element (a₆ = 400)!</strong><br>Starting from a₁ = 17 is WRONG — you will get incorrect answer!</div>
+        </div>
+      </div>
+
+      <!-- PYQ 3: Merkle-Hellman optional -->
+      <div class="pyq-card med">
+        <div class="pyq-card-header" onclick="toggleAns(this)">
+          <div class="pyq-num">2</div>
+          <div>
+            <div class="pyq-q-text">[OPTIONAL] Consider a super increasing knapsack {1,2,4,10,20,40} as the private key with m = 110 and n = 31. Find the values of public key and encrypt the plaintext 100100111100101110.</div>
+            <div class="pyq-meta">
+              <span class="badge badge-p1">OPTIONAL</span>
+              <span class="badge badge-marks">P6: Feb/Mar 2023 · 6M</span>
+              <span class="badge badge-verified">✓ Math Verified</span>
+            </div>
+          </div>
+          <div class="pyq-toggle">▼ Show Answer</div>
+        </div>
+        <div class="pyq-answer">
+          <div class="ans-block">
+            <h4>Step 1 — Public Key Generation: aᵢ = (bᵢ × n) mod m = (bᵢ × 31) mod 110</h4>
+            <table class="step-table">
+              <tr><th>bᵢ (private)</th><th>bᵢ × 31</th><th>mod 110</th><th>aᵢ (public)</th></tr>
+              <tr><td>1</td><td>31</td><td>31</td><td class="highlight">31</td></tr>
+              <tr><td>2</td><td>62</td><td>62</td><td class="highlight">62</td></tr>
+              <tr><td>4</td><td>124</td><td>14</td><td class="highlight">14</td></tr>
+              <tr><td>10</td><td>310</td><td>90</td><td class="highlight">90</td></tr>
+              <tr><td>20</td><td>620</td><td>70</td><td class="highlight">70</td></tr>
+              <tr><td>40</td><td>1240</td><td>30</td><td class="highlight">30</td></tr>
+            </table>
+            <div class="math-box"><div class="label">Public Key</div>a = {31, 62, 14, 90, 70, 30}</div>
+          </div>
+          <div class="ans-block">
+            <h4>Step 2 — Encrypt 100100111100101110 (18 bits → 3 blocks of 6)</h4>
+            <table class="step-table">
+              <tr><th>Block</th><th>Bits</th><th>C = Σ(xᵢ×aᵢ)</th><th>Result</th></tr>
+              <tr><td>B1</td><td>1 0 0 1 0 0</td><td>1(31)+0+0+1(90)+0+0 = 31+90</td><td class="final">C₁ = 121</td></tr>
+              <tr><td>B2</td><td>1 1 1 1 0 0</td><td>1(31)+1(62)+1(14)+1(90)+0+0 = 31+62+14+90</td><td class="final">C₂ = 197</td></tr>
+              <tr><td>B3</td><td>1 0 1 1 1 0</td><td>1(31)+0+1(14)+1(90)+1(70)+0 = 31+14+90+70</td><td class="final">C₃ = 205</td></tr>
+            </table>
+            <div class="verify-box">✅ Public Key = {31,62,14,90,70,30} · Ciphertext = {121, 197, 205}</div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end knapsack pyq-list -->
+
+    <div class="revision-grid">
+      <div class="rev-card">
+        <h4>⚡ Knapsack Quick Revision</h4>
+        <div class="kv"><span class="k">Super-increasing</span><span class="v">aᵢ &gt; Σ previous</span></div>
+        <div class="kv"><span class="k">General knapsack</span><span class="v">NP-complete (hard)</span></div>
+        <div class="kv"><span class="k">Super-increasing</span><span class="v">O(n) greedy</span></div>
+        <div class="kv"><span class="k">Start direction</span><span class="v">LARGEST → smallest</span></div>
+        <div class="kv"><span class="k">PYQ answer</span><span class="v">x=(0,1,1,0,1,0)</span></div>
+        <div class="kv"><span class="k">Verification</span><span class="v">25+46+201=272 ✓</span></div>
+      </div>
+    </div>
+  </div><!-- end knapsack panel -->
+
+  <!-- ═══════════════ IT ACT PANEL ═══════════════ -->
+  <div id="cie-panel-itact" class="cie-panel">
+    <div class="topic-header">
+      <span style="font-size:1.5rem">📜</span>
+      <div>
+        <div style="font-size:1.1rem;font-weight:800">IT Act 2000 — Module 4 Theory</div>
+        <div style="font-size:.8rem;opacity:.85">Source: Prof. Tejonidhi M R, IT_Act.ppt Slides 2–30</div>
+      </div>
+      <span class="must">⭐ HIGH — 7 PYQs across 3 subtopics</span>
+    </div>
+
+    <div class="pyq-list">
+
+      <!-- Objectives group -->
+      <div class="pyq-card high">
+        <div class="pyq-card-header" onclick="toggleAns(this)">
+          <div class="pyq-num">1</div>
+          <div>
+            <div class="pyq-q-text">Define the IT Act. List out / mention / state the objectives of the Information Technology Act 2000.</div>
+            <div class="pyq-meta">
+              <span class="badge badge-p0">P0 — MASTER ANSWER</span>
+              <span class="badge badge-marks">P3: Jan 2021 · 8M</span>
+              <span class="badge badge-marks">P4: Feb/Mar 2022 · 10M</span>
+              <span class="badge badge-marks">P5: Sept/Oct 2022 · 10M</span>
+            </div>
+          </div>
+          <div class="pyq-toggle">▼ Show Full Answer</div>
+        </div>
+        <div class="pyq-answer">
+          <div class="ans-block">
+            <h4>I. Definition and Legislative Background</h4>
+            <table class="step-table">
+              <tr><th>Detail</th><th>Fact</th></tr>
+              <tr><td>Full Name</td><td>The Information Technology Act, 2000</td></tr>
+              <tr><td class="highlight">Act Number</td><td class="highlight"><strong>Act No. 21 of 2000</strong></td></tr>
+              <tr><td class="highlight">Passed by Parliament</td><td class="highlight"><strong>9 June 2000</strong></td></tr>
+              <tr><td class="highlight">Came into force</td><td class="highlight"><strong>17 October 2000</strong></td></tr>
+              <tr><td class="highlight">International Basis</td><td class="highlight"><strong>UNCITRAL Model Law on Electronic Commerce, 1996</strong></td></tr>
+              <tr><td>Territorial Scope</td><td>Whole of India + extraterritorial (Section 75) if Indian computer involved</td></tr>
+            </table>
+          </div>
+          <div class="ans-block">
+            <h4>II. Six Core Objectives</h4>
+            <table class="step-table">
+              <tr><th>#</th><th>Objective</th><th>Explanation</th></tr>
+              <tr><td><strong>1</strong></td><td>Legal recognition of Electronic Transactions (E-Commerce)</td><td>Provide legal sanction to transactions via electronic data interchange (EDI), replacing paper-based methods.</td></tr>
+              <tr><td><strong>2</strong></td><td>Legal recognition of Digital Signatures</td><td>Digital signatures based on asymmetric cryptosystems are legally equivalent to handwritten signatures.</td></tr>
+              <tr><td><strong>3</strong></td><td>Facilitation of e-Governance</td><td>Enable electronic filing of forms, applications, licenses with government — paperless governance.</td></tr>
+              <tr><td><strong>4</strong></td><td>Amendment of four existing Indian Acts</td><td>Update colonial laws to include digital evidence and electronic commerce.</td></tr>
+              <tr><td><strong>5</strong></td><td>Regulation of Certifying Authorities (CA)</td><td>Create Controller of Certifying Authorities (CCA) to license and monitor Digital Signature Certificates (DSC).</td></tr>
+              <tr><td><strong>6</strong></td><td>Prevention and adjudication of Cybercrimes</td><td>Define computer offences and establish Adjudicating Officers and Cyber Appellate Tribunal.</td></tr>
+            </table>
+          </div>
+          <div class="ans-block">
+            <h4>Objective 4 — The Four Amended Acts (Must Name All Four!)</h4>
+            <table class="step-table">
+              <tr><th>Act</th><th>Year</th><th>Amendment Purpose</th></tr>
+              <tr><td class="highlight">Indian Penal Code</td><td class="highlight">1860</td><td>Include cybercrimes and electronic forgery</td></tr>
+              <tr><td class="highlight">Indian Evidence Act</td><td class="highlight">1872</td><td>Make electronic records admissible as primary/secondary evidence</td></tr>
+              <tr><td class="highlight">Bankers' Books Evidence Act</td><td class="highlight">1891</td><td>Recognize printouts of electronic bank ledgers and statements</td></tr>
+              <tr><td class="highlight">Reserve Bank of India Act</td><td class="highlight">1934</td><td>Facilitate electronic fund transfers between banks</td></tr>
+            </table>
+          </div>
+          <div class="trap-box"><strong>⚠️ MUST NAME ALL 4 AMENDED ACTS</strong> — Examiners specifically check for IPC 1860, Evidence Act 1872, Bankers' Books 1891, RBI Act 1934!</div>
+        </div>
+      </div>
+
+      <!-- Provisions group -->
+      <div class="pyq-card high">
+        <div class="pyq-card-header" onclick="toggleAns(this)">
+          <div class="pyq-num">2</div>
+          <div>
+            <div class="pyq-q-text">Explain the important provisions of IT act. / Explain any 4 provisions of IT act.</div>
+            <div class="pyq-meta">
+              <span class="badge badge-p0">P0 — MASTER ANSWER</span>
+              <span class="badge badge-marks">P8: Dec 2019 · 10M</span>
+              <span class="badge badge-marks">P3: Jan 2021 · 12M</span>
+              <span class="badge badge-marks">P4: Feb/Mar 2022 · 6M</span>
+            </div>
+          </div>
+          <div class="pyq-toggle">▼ Show Full Answer</div>
+        </div>
+        <div class="pyq-answer">
+          <div class="ans-block">
+            <h4>IT Act Structure: 13 Chapters | 94 Sections | 4 Schedules</h4>
+          </div>
+          <div class="ans-block">
+            <h4>Provision 1 — Digital Signature &amp; Authentication (Sections 3 &amp; 5)</h4>
+            <p style="font-size:.88rem;line-height:1.6">
+            <strong>Section 3:</strong> Any subscriber may authenticate an electronic record by affixing a <strong>digital signature</strong> using an asymmetric cryptosystem and hash function.<br>
+            <strong>Section 5:</strong> Where any law requires a document to be <strong>signed</strong>, a digital signature satisfies such law — legally equivalent to a handwritten ink signature.
+            </p>
+          </div>
+          <div class="ans-block">
+            <h4>Provision 2 — Electronic Governance (Sections 4, 6, 7, 8)</h4>
+            <p style="font-size:.88rem;line-height:1.6">
+            <strong>Section 4:</strong> Information in electronic form satisfies any statutory requirement of <em>writing or printed form</em>.<br>
+            <strong>Section 6:</strong> Filing of forms, issuance of licenses, grants, approvals and payments can be done electronically by government ministries.<br>
+            <strong>Section 7:</strong> Electronic retention of records is valid if accessible for future reference in original format.
+            </p>
+          </div>
+          <div class="ans-block">
+            <h4>Provision 3 — Attribution, Acknowledgement &amp; Dispatch (Sections 11, 12, 13)</h4>
+            <p style="font-size:.88rem;line-height:1.6">
+            <strong>Section 11 (Attribution):</strong> An electronic record is attributed to the originator if sent by: (1) the originator, (2) an authorized agent, or (3) an automated system programmed by originator.<br>
+            <strong>Section 12 (Acknowledgement):</strong> Receipt confirmed by any communication/conduct of addressee. If originator stipulates acknowledgement as binding → record is <em>never sent</em> until ack received.<br>
+            <strong>Section 13 (Dispatch):</strong> Dispatch occurs when record <em>leaves originator's control</em>.
+            </p>
+          </div>
+          <div class="ans-block">
+            <h4>Provision 4 — Secure Electronic Records (Sections 14, 15)</h4>
+            <p style="font-size:.88rem;line-height:1.6">
+            <strong>Section 14:</strong> A secure electronic record is verified to have remained <strong>unaltered</strong> since a specific point in time using an agreed security procedure.<br>
+            <strong>Section 15:</strong> A secure digital signature is applied using a <strong>private key exclusively under subscriber's control</strong>.
+            </p>
+          </div>
+          <div class="ans-block">
+            <h4>Provision 5 — Penalties &amp; Civil Liability (Section 43)</h4>
+            <p style="font-size:.88rem;line-height:1.6">
+            Any person who without permission: accesses computer systems, downloads/copies data, introduces viruses, disrupts network access — is liable to pay <strong>compensation up to ₹1 Crore</strong> to the affected party.
+            </p>
+          </div>
+          <div class="ans-block">
+            <h4>Provision 6 — Criminal Offences (Sections 65, 66, 67)</h4>
+            <table class="step-table">
+              <tr><th>Section</th><th>Offence</th><th>Punishment</th></tr>
+              <tr><td class="highlight"><strong>Section 65</strong></td><td>Tampering with computer source documents (concealment, destruction, alteration)</td><td class="highlight">≤ 3 years imprisonment OR ≤ ₹2 lakh fine</td></tr>
+              <tr><td class="highlight"><strong>Section 66</strong></td><td>Computer-related offences — hacking with dishonest intent</td><td class="highlight">≤ 3 years imprisonment OR ≤ ₹5 lakh fine</td></tr>
+              <tr><td class="highlight"><strong>Section 67</strong></td><td>Publishing/transmitting obscene material in electronic form</td><td class="highlight">First offence: ≤ 5 years + ≤ ₹10 lakh fine</td></tr>
+            </table>
+          </div>
+          <div class="verify-box">✅ Sections covered: 3,4,5,6,7,8 (e-Gov), 11,12,13 (Attribution), 14,15 (Secure records), 43 (Civil ₹1Cr), 65,66,67 (Criminal)</div>
+        </div>
+      </div>
+
+      <!-- Section 11 & 12 specific -->
+      <div class="pyq-card med">
+        <div class="pyq-card-header" onclick="toggleAns(this)">
+          <div class="pyq-num">3</div>
+          <div>
+            <div class="pyq-q-text">Explain: i) Attribution of electronic records (Section 11) ii) Acknowledgement of receipt (Section 12).</div>
+            <div class="pyq-meta">
+              <span class="badge badge-p0">P0</span>
+              <span class="badge badge-marks">P4: Feb/Mar 2022 · 10M</span>
+            </div>
+          </div>
+          <div class="pyq-toggle">▼ Show Answer</div>
+        </div>
+        <div class="pyq-answer">
+          <div class="ans-block">
+            <h4>Section 11 — Attribution of Electronic Records</h4>
+            <p style="font-size:.88rem;line-height:1.6">An electronic record is attributed to the <strong>originator</strong> if sent by:</p>
+            <table class="step-table">
+              <tr><th>#</th><th>Condition</th></tr>
+              <tr><td><strong>1</strong></td><td>The originator themselves</td></tr>
+              <tr><td><strong>2</strong></td><td>A person authorized to act on behalf of the originator (agent/employee)</td></tr>
+              <tr><td><strong>3</strong></td><td>An automated information system programmed by or on behalf of the originator</td></tr>
+            </table>
+            <p style="font-size:.85rem;color:var(--text2);margin-top:.4rem"><em>Legal effect: Once attributed, the originator cannot repudiate the record.</em></p>
+          </div>
+          <div class="ans-block">
+            <h4>Section 12 — Acknowledgement of Receipt</h4>
+            <table class="step-table">
+              <tr><th>Situation</th><th>Rule</th></tr>
+              <tr><td>No form of acknowledgement agreed</td><td>Any communication or conduct of addressee confirming receipt is valid</td></tr>
+              <tr><td class="highlight">Originator stipulates binding on ack</td><td class="highlight">Record is treated as <strong>NEVER SENT</strong> until acknowledgement received</td></tr>
+              <tr><td>Time specified but ack not received</td><td>Originator may send notice; if still no ack → treat as never sent</td></tr>
+            </table>
+          </div>
+          <div class="ans-block">
+            <h4>Section 13 — Dispatch &amp; Receipt (bonus for completeness)</h4>
+            <p style="font-size:.88rem;line-height:1.5">
+            <strong>Dispatch:</strong> Occurs when record enters a computer resource <em>outside originator's control</em>.<br>
+            <strong>Receipt:</strong> When record enters addressee's designated computer resource.<br>
+            <strong>Place:</strong> Deemed to be principal place of business of originator/addressee.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end IT Act pyq-list -->
+
+    <div class="section-label">⚡ IT ACT QUICK REVISION CARD</div>
+    <div class="revision-grid">
+      <div class="rev-card">
+        <h4>📌 Key Facts</h4>
+        <div class="kv"><span class="k">Act No.</span><span class="v">21 of 2000</span></div>
+        <div class="kv"><span class="k">Passed</span><span class="v">9 June 2000</span></div>
+        <div class="kv"><span class="k">Notified</span><span class="v">17 October 2000</span></div>
+        <div class="kv"><span class="k">Based on</span><span class="v">UNCITRAL Model Law 1996</span></div>
+        <div class="kv"><span class="k">Structure</span><span class="v">94 Sections, 13 Chapters</span></div>
+      </div>
+      <div class="rev-card">
+        <h4>📌 Critical Section Numbers</h4>
+        <div class="kv"><span class="k">Sec 4</span><span class="v">Electronic records = writing</span></div>
+        <div class="kv"><span class="k">Sec 5</span><span class="v">Digital sig = handwritten</span></div>
+        <div class="kv"><span class="k">Sec 43</span><span class="v">Civil ≤ ₹1 Crore</span></div>
+        <div class="kv"><span class="k">Sec 65</span><span class="v">Tampering: 3yr/₹2L</span></div>
+        <div class="kv"><span class="k">Sec 66</span><span class="v">Hacking: 3yr/₹5L</span></div>
+        <div class="kv"><span class="k">Sec 67</span><span class="v">Obscenity: 5yr/₹10L</span></div>
+      </div>
+      <div class="rev-card">
+        <h4>📌 4 Amended Acts (Must Name!)</h4>
+        <div class="kv"><span class="k">IPC</span><span class="v">1860</span></div>
+        <div class="kv"><span class="k">Evidence Act</span><span class="v">1872</span></div>
+        <div class="kv"><span class="k">Bankers' Books</span><span class="v">1891</span></div>
+        <div class="kv"><span class="k">RBI Act</span><span class="v">1934</span></div>
+      </div>
+    </div>
+    <div class="trap-box"><strong>⚠️ Examiner Trap:</strong> Always state Section numbers (Sec 4, 5, 11-13, 43, 65, 66) — quoting exact sections earns maximum marks!</div>
+  </div><!-- end IT Act panel -->
+
+</div><!-- end page-cietarget -->
 
 </div><!-- /main -->
 

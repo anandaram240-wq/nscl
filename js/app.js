@@ -84,6 +84,29 @@ function saveProgress() {
 }
 
 // ═══════════════════════════════════════════════════════════════
+// ⭐ CIE TARGET SECTION — Helper Functions
+// ═══════════════════════════════════════════════════════════════
+function showCieTab(tabId) {
+  document.querySelectorAll('.cie-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.cie-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById('cie-panel-' + tabId).classList.add('active');
+  document.querySelectorAll('.cie-tab').forEach(t => {
+    if (t.getAttribute('onclick') && t.getAttribute('onclick').includes("'" + tabId + "'")) {
+      t.classList.add('active');
+    }
+  });
+}
+
+function toggleAns(headerEl) {
+  const ans = headerEl.parentElement.querySelector('.pyq-answer');
+  const toggle = headerEl.querySelector('.pyq-toggle');
+  if (!ans) return;
+  const isOpen = ans.classList.contains('open');
+  ans.classList.toggle('open', !isOpen);
+  if (toggle) toggle.textContent = isOpen ? '▼ Show Answer' : '▲ Hide Answer';
+}
+
+// ═══════════════════════════════════════════════════════════════
 // PAGE NAVIGATION
 // ═══════════════════════════════════════════════════════════════
 function showPage(pageId) {
