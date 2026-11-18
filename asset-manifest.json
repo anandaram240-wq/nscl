@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/nscl/static/css/main.5d2c4a8e.css",
+    "main.js": "/nscl/static/js/main.f6d2972c.js",
+    "index.html": "/nscl/index.html",
+    "main.5d2c4a8e.css.map": "/nscl/static/css/main.5d2c4a8e.css.map",
+    "main.f6d2972c.js.map": "/nscl/static/js/main.f6d2972c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5d2c4a8e.css",
+    "static/js/main.f6d2972c.js"
+  ]
+}
